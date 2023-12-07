@@ -19,7 +19,7 @@ def api_mydata():
 
 @app.route('/city/<name>')
 def city(name):
-    with open('static/us-cities.csv', 'r') as f:
+    with open('/Users/wyc/Desktop/assignment1-1/static/us-cities.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             if row['city'] == name:
@@ -29,7 +29,7 @@ def city(name):
 def get_data():
     data = []
     # 替换为你的CSV文件路径
-    with open('/Users/wyc/Desktop/project/static/amazon-reviews.csv', 'r') as f:
+    with open('/Users/wyc/Desktop/assignment1-1/static/amazon-reviews.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             data.append(row)
