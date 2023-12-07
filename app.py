@@ -9,7 +9,7 @@ def index():
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return 'Hello World!'
+    return render_template('index.html')
 
 @app.route('/api/mydata', methods=['GET'])
 def api_mydata():
@@ -19,7 +19,7 @@ def api_mydata():
 
 @app.route('/city/<name>')
 def city(name):
-    with open('us-cities.csv', 'r') as f:
+    with open('static/us-cities.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             if row['city'] == name:
@@ -28,7 +28,8 @@ def city(name):
 
 def get_data():
     data = []
-    with open('amazon-reviews.csv', 'r') as f:
+    # 替换为你的CSV文件路径
+    with open('/Users/wyc/Desktop/project/static/amazon-reviews.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             data.append(row)
