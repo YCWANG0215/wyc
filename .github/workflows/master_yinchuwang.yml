@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'YinchuWang'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3B9FB5433E7D40B2BCCDF5C463EF109D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_83B4EA07C4784DFD83082210CF67070C }}
